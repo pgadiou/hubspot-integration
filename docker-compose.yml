@@ -1,0 +1,19 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: integ-hubspot
+    environment:
+      - APPLICATION_HOST=localhost
+      - APPLICATION_PORT=3000
+      - DATABASE_URL=postgres://forest:secret@host.docker.internal:5416/forest_demo
+      - DATABASE_SCHEMA=public
+      - DATABASE_SSL=false
+      - DATABASE_ENCRYPT=false
+      - AUTH_SECRET=053420d80e6e9d0a7f7741a0d1323901b276c224dfb0903627ab52fbe3feac65eb8c0195e9101482acc602c220a10754
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/src/app
