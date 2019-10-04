@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
     },
     crm_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.BIGINT,
     },
   }, {
     tableName: 'companies',
@@ -28,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Model.associate = (models) => {
     Model.hasMany(models.users);
+    Model.hasOne(models.subscriptions)
   };
 
   return Model;
