@@ -11,7 +11,7 @@
     "cors": "^2.8.5",
     "debug": "~4.0.1",
     "dotenv": "~6.1.0",
-    "express": "~4.16.3",
+    "express": "~4.17.3",
     "lumber-forestadmin": "^1.2.1",
     "pg": "~6.1.0",
     "require-all": "^3.0.0",
